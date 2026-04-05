@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.65">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'Lucida Grande'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Erste Maxim — Marketing &amp; Marble Excellence&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Raleway:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--gold:<span class="Apple-converted-space">      </span>#C9A84C;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--gold-lt: <span class="Apple-converted-space">  </span>#E2C97E;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--gold-dim:<span class="Apple-converted-space">  </span>rgba(201,168,76,0.18);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--gold-line: rgba(201,168,76,0.35);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--dark:<span class="Apple-converted-space">      </span>#0B0A09;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--dark2: <span class="Apple-converted-space">    </span>#131210;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--dark3: <span class="Apple-converted-space">    </span>#1A1816;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text:<span class="Apple-converted-space">      </span>#EDE8DF;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--muted: <span class="Apple-converted-space">    </span>rgba(237,232,223,0.55);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--faint: <span class="Apple-converted-space">    </span>rgba(237,232,223,0.18);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>html { scroll-behavior: smooth; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Raleway', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow-x: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>body::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content:'';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:fixed; inset:0; pointer-events:none; z-index:0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:</p>
+<p class="p1"><span class="Apple-converted-space">        </span>linear-gradient(134deg, transparent 0%, rgba(201,168,76,0.03) 30%, transparent 55%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>linear-gradient(210deg, transparent 20%, rgba(255,255,255,0.015) 50%, transparent 70%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>linear-gradient( 60deg, transparent 40%, rgba(201,168,76,0.025) 65%, transparent 80%);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* NAV */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed; top:0; left:0; right:0; z-index:999;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.3rem 6vw;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items:center; justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(to bottom, rgba(11,10,9,0.97) 60%, transparent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid transparent;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: border-color 0.4s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav.scrolled { border-color: var(--gold-line); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-brand {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.4rem; font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.15em; text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text); text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-brand em { font-style:normal; color: var(--gold); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-center { display:flex; gap:2rem; list-style:none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-center a {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.66rem; font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.22em; text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted); text-decoration: none; transition: color 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-center a:hover { color: var(--gold); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.lang-switcher {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; gap: 0.5rem; align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.lang-switcher span { color: var(--gold-line); font-size: 0.65rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.lang-btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Raleway', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.65rem; font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.18em; text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted); background: none; border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer; padding: 0.2rem 0.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: color 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.lang-btn:hover { color: var(--gold-lt); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.lang-btn.active { color: var(--gold); border-bottom: 1px solid var(--gold); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* HERO */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative; min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; padding: 8rem 6vw 6rem; overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero::after {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content:''; position:absolute; inset:0; pointer-events:none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(ellipse 70% 55% at 50% 48%, rgba(201,168,76,0.06) 0%, transparent 70%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: pulse 6s ease-in-out infinite alternate;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes pulse {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>from { opacity:0.6; transform:scale(1); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>to <span class="Apple-converted-space">  </span>{ opacity:1; <span class="Apple-converted-space">  </span>transform:scale(1.06); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-eyebrow {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.62rem; font-weight:500; letter-spacing:0.4em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform:uppercase; color:var(--gold); margin-bottom:1.6rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:0; animation:fadeUp 0.9s ease forwards 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family:'Cormorant Garamond',serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:clamp(3.4rem,8vw,7.5rem);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:300; line-height:1; letter-spacing:0.04em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:0; animation:fadeUp 1s ease forwards 0.5s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-title em { font-style:italic; color:var(--gold); font-weight:300; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-sub {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top:1.5rem; font-size:0.74rem; font-weight:300;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing:0.28em; text-transform:uppercase; color:var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:0; animation:fadeUp 1s ease forwards 0.7s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-divider {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:2.8rem auto; width:1px; height:60px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(to bottom, transparent, var(--gold), transparent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:0; animation:fadeUp 1s ease forwards 0.9s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-tagline {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family:'Cormorant Garamond',serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:clamp(1rem,2vw,1.3rem);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:300; font-style:italic; color:var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width:580px; line-height:1.7;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:0; animation:fadeUp 1s ease forwards 1.1s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-cta {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex; gap:1.4rem; margin-top:3rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:0; animation:fadeUp 1s ease forwards 1.3s;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap:wrap; justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:inline-block; font-family:'Raleway',sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.65rem; font-weight:500;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing:0.28em; text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:0.85rem 2.4rem; text-decoration:none; transition:all 0.35s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-gold { background:var(--gold); color:var(--dark); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-gold:hover { background:var(--gold-lt); transform:translateY(-2px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-outline { border:1px solid var(--gold-line); color:var(--gold); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-outline:hover { background:var(--gold-dim); border-color:var(--gold); transform:translateY(-2px); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes fadeUp {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>from { opacity:0; transform:translateY(22px); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>to <span class="Apple-converted-space">  </span>{ opacity:1; transform:translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.scroll-hint {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex; flex-direction:column; align-items:center; gap:0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.55rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--faint);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation:fadeUp 1s ease forwards 1.6s; opacity:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.scroll-hint span {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:1px; height:36px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(to bottom, var(--gold-line), transparent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation:scrollLine 2s ease infinite;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes scrollLine {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>0% <span class="Apple-converted-space">  </span>{ transform:scaleY(0); transform-origin:top; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>50%<span class="Apple-converted-space">  </span>{ transform:scaleY(1); transform-origin:top; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>51%<span class="Apple-converted-space">  </span>{ transform:scaleY(1); transform-origin:bottom; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>100% { transform:scaleY(0); transform-origin:bottom; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* SECTIONS */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>section { position:relative; z-index:1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-inner { max-width:1140px; margin:0 auto; padding:0 6vw; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-border { width:50px; height:1px; background:var(--gold); margin-bottom:1.2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.6rem; letter-spacing:0.38em; text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--gold); font-weight:500; margin-bottom:0.7rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family:'Cormorant Garamond',serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:clamp(2.2rem,4.5vw,3.4rem);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:300; line-height:1.15;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-title em { font-style:italic; color:var(--gold); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* VENTURES */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.ventures { padding:9rem 0; background:var(--dark2); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.ventures-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid; grid-template-columns:1fr 1px 1fr; margin-top:5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.ventures-sep {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(to bottom, transparent, var(--gold-line), transparent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:0 3.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-card { padding:0 2.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-card:first-child { padding-left:0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-card:last-child<span class="Apple-converted-space">  </span>{ padding-right:0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-num {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family:'Cormorant Garamond',serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:4rem; font-weight:300; color:var(--gold-dim); line-height:1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom:1px solid var(--gold-line); padding-bottom:1rem; margin-bottom:2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-icon { width:52px; height:52px; margin-bottom:1.8rem; opacity:0.85; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.6rem; letter-spacing:0.32em; text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--gold); margin-bottom:0.7rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-name {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family:'Cormorant Garamond',serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:clamp(1.7rem,3vw,2.4rem);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:300; line-height:1.2; margin-bottom:1.4rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-desc {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.82rem; font-weight:300;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height:1.85; color:var(--muted); margin-bottom:2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-services { list-style:none; margin-bottom:2.4rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-services li {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.75rem; font-weight:400;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:0.55rem 0; border-bottom:1px solid var(--faint);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--muted); display:flex; align-items:center; gap:0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-services li::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content:''; width:18px; height:1px; background:var(--gold); flex-shrink:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-link {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex; align-items:center; gap:0.7rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.65rem; font-weight:500;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing:0.25em; text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--gold); text-decoration:none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom:1px solid var(--gold-line); padding-bottom:0.3rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition:border-color 0.3s, gap 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-link:hover { border-color:var(--gold); gap:1.1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-link svg { transition:transform 0.3s; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.venture-link:hover svg { transform:translateX(4px); }</p>
+<p class="p2"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* CONTACT */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact { padding:8rem 0; background:var(--dark); text-align:center; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact-inner { max-width:700px; margin:0 auto; padding:0 6vw; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact-tagline {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family:'Cormorant Garamond',serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:clamp(1.3rem,2.5vw,1.9rem);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:300; font-style:italic;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--muted); margin:1.5rem 0 3.5rem; line-height:1.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact-links {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex; justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:3rem; flex-wrap:wrap; margin-bottom:3.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact-item { display:flex; flex-direction:column; align-items:center; gap:0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact-item-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.58rem; letter-spacing:0.3em; text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--gold); font-weight:500;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact-item-val {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.82rem; font-weight:300;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--text); text-decoration:none; transition:color 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact-item-val:hover { color:var(--gold); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact-divider {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:100%; height:1px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(to right, transparent, var(--gold-line), transparent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:3rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* FOOTER */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--dark2); border-top:1px solid var(--gold-line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:2.5rem 6vw;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex; align-items:center; justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap:wrap; gap:1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-brand {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family:'Cormorant Garamond',serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:1.1rem; font-weight:600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing:0.15em; text-transform:uppercase; color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-brand em { font-style:normal; color:var(--gold); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-copy { font-size:0.62rem; letter-spacing:0.12em; color:var(--faint); font-weight:300; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-sites { display:flex; gap:1.8rem; list-style:none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-sites a {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.62rem; letter-spacing:0.18em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform:uppercase; color:var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration:none; transition:color 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-sites a:hover { color:var(--gold); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* RESPONSIVE */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>@media(max-width:760px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.ventures-grid { grid-template-columns:1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.ventures-sep { display:none; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.venture-card { padding:3rem 0 0; border-top:1px solid var(--gold-line); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.venture-card:first-child { border-top:none; padding-top:0; }</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p2"><span class="Apple-converted-space">     </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// Translations</p>
+<p class="p1">const T = {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>en: {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav: ["Ventures","Contact"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_eyebrow: "Erste Maxim Technologies DOO",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_title: ["Excellence","in &lt;em&gt;Every&lt;/em&gt;","Endeavour"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_sub: "Marketing · Natural Stone",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_tagline: "A multi-venture house dedicated to crafting visibility, beauty, and enduring value — in the digital world and in stone.",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_btn1: "Our Ventures",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_btn2: "Contact Us",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>scroll: "Scroll",</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>sec_ventures_label: "What We Do",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>sec_ventures_title: "Two Pillars of &lt;em&gt;Erste Maxim&lt;/em&gt;",</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_label: "Digital Marketing",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_name: "Nova Crna Gora&lt;br&gt;— Media &amp;amp; Marketing",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_desc: "Full-service digital marketing agency delivering tailored campaigns, brand strategy, and content that captures audiences across Montenegro and beyond. We drive measurable growth through creativity and data.",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_services: ["Brand Strategy &amp;amp; Identity","Digital Advertising &amp;amp; SEO","Social Media Management","Content Creation &amp;amp; Production","Web Design &amp;amp; Development"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_link: "Visit novacrnagora.com",</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_label: "Natural Stone",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_name: "Marmor MNE&lt;br&gt;— Stone Artisanship",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_desc: "Premium natural stone solutions for residential, hospitality, and commercial spaces. From restoration and polishing to bespoke creations in marble, granite, and travertine — we transform stone into lasting beauty.",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_services: ["Marble Restoration &amp;amp; Polishing","Interior Design — Floors &amp;amp; Walls","Exterior Facades &amp;amp; Pavements","Hotel &amp;amp; Villa Fit-Outs","Custom Stone Creations"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_link: "Visit mramormne.com",</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>sec_contact_label: "Contact us",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>sec_contact_title: "Let's Build &lt;em&gt;Something&lt;/em&gt; Together",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>contact_tagline: "\"Whether it is your brand or your walls —&lt;br&gt;we make sure they speak for themselves.\"",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>contact_labels: ["Marketing","Natural Stone","Phone","Location"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>contact_location: "Podgorica, Montenegro",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn_ncg: "Nova Crna Gora <span class="s1">→</span>",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn_mrm: "Marmor MNE <span class="s1">→</span>",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer_copy: "© 2025 Erste Maxim Technologies DOO · Podgorica"</p>
+<p class="p1"><span class="Apple-converted-space">  </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>ru: {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav: ["Направления","Контакты"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_eyebrow: "Erste Maxim Technologies DOO ",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_title: ["Совершенство","в &lt;em&gt;каждом&lt;/em&gt;","начинании"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_sub: "Маркетинг · Натуральный камень",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_tagline: "Многопрофильная компания, создающая видимость, красоту и непреходящую ценность — в цифровом мире и в камне.",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_btn1: "Наши направления",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_btn2: "Связаться с нами",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>scroll: "Прокрутить",</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>sec_ventures_label: "Чем мы занимаемся",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>sec_ventures_title: "Два столпа &lt;em&gt;Erste Maxim&lt;/em&gt;",</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_label: "Цифровой маркетинг",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_name: "Nova Crna Gora&lt;br&gt;— Медиа и маркетинг",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_desc: "Маркетинговое агентство полного цикла, создающее индивидуальные кампании, стратегии брендинга и контент, привлекающий аудиторию в Черногории и за её пределами. Мы обеспечиваем измеримый рост через творческий подход и данные.",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_services: ["Стратегия и идентичность бренда","Цифровая реклама и SEO","Управление социальными сетями","Создание и производство контента","Веб-дизайн и разработка"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_link: "Посетить novacrnagora.com",</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_label: "Натуральный камень",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_name: "Marmor MNE&lt;br&gt;— Каменное мастерство",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_desc: "Премиальные решения из натурального камня для жилых, гостиничных и коммерческих пространств. От реставрации и полировки до индивидуальных изделий из мрамора, гранита и травертина — мы превращаем камень в вечную красоту.",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_services: ["Реставрация и полировка мрамора","Интерьер — полы и стены","Фасады и мощение","Отделка отелей и вилл","Изделия из камня на заказ"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_link: "Посетить mramormne.com",</p>
+<p class="p2"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>sec_contact_label: "Связаться с нами",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>sec_contact_title: "Давайте создадим &lt;em&gt;что-то&lt;/em&gt; вместе",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>contact_tagline: "«Будь то ваш бренд или ваши стены —&lt;br&gt;мы сделаем так, чтобы они говорили сами за себя.»",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>contact_labels: ["Маркетинг","Натуральный камень","Телефон","Местонахождение"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>contact_location: "Подгорица, Черногория",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn_ncg: "Nova Crna Gora <span class="s1">→</span>",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn_mrm: "Marmor MNE <span class="s1">→</span>",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer_copy: "© 2025 Erste Maxim Technologies DOO · Подгорица"</p>
+<p class="p1"><span class="Apple-converted-space">  </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>me: {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav: ["Djelatnosti","Kontakt"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_eyebrow: "Erste Maxim Technologies DOO ",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_title: ["Izvrsnost","u &lt;em&gt;svakom&lt;/em&gt;","poduhvatu"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_sub: "Marketing · Prirodni kamen",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_tagline: "Višeprofitna kuća posvećena izgradnji vidljivosti, ljepote i trajne vrijednosti — u digitalnom svijetu i u kamenu.",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_btn1: "Naše djelatnosti",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hero_btn2: "Kontaktirajte nas",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>scroll: "Skroluj",</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>sec_ventures_label: "Šta radimo",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>sec_ventures_title: "Dva stuba &lt;em&gt;Erste Maxim&lt;/em&gt;",</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_label: "Digitalni marketing",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_name: "Nova Crna Gora&lt;br&gt;— Mediji i marketing",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_desc: "Agencija za digitalni marketing punog servisa koja isporučuje prilagođene kampanje, brendingstrategiju i sadržaj koji osvaja publiku u Crnoj Gori i šire. Mjerljivi rast postižemo kroz kreativnost i podatke.",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_services: ["Strategija i identitet brenda","Digitalno oglašavanje i SEO","Upravljanje društvenim mrežama","Kreiranje i produkcija sadržaja","Web dizajn i razvoj"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v1_link: "Posjetite novacrnagora.com",</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_label: "Prirodni kamen",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_name: "Marmor MNE&lt;br&gt;— Kamenarstvo",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_desc: "Vrhunska rješenja od prirodnog kamena za stambene, hotelijerske i poslovne prostore. Od restauracije i poliranja do besprijekornih kreacija od mermera, granita i travertina — pretvaramo kamen u trajnu ljepotu.",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_services: ["Restauracija i poliranje mermera","Enterijer — podovi i zidovi","Fasade i popločavanja","Opremanje hotela i vila","Izrada kamena po mjeri"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>v2_link: "Posjetite mramormne.com",</p>
+<p class="p2"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>sec_contact_label: "Kontaktirajte nas",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>sec_contact_title: "Izgradimo &lt;em&gt;nešto&lt;/em&gt; zajedno",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>contact_tagline: "„Bilo da je u pitanju vaš brend ili vaši zidovi —&lt;br&gt;pobrinućemo se da govore sami za sebe.“",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>contact_labels: ["Marketing","Prirodni kamen","Telefon","Lokacija"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>contact_location: "Podgorica, Crna Gora",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn_ncg: "Nova Crna Gora <span class="s1">→</span>",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn_mrm: "Marmor MNE <span class="s1">→</span>",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer_copy: "© 2025 Erste Maxim Technologies DOO · Podgorica"</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">};</p>
+<p class="p2"><br></p>
+<p class="p1">let currentLang = 'en';</p>
+<p class="p2"><br></p>
+<p class="p1">function setLang(lang) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>currentLang = lang;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const t = T[lang];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Update language buttons</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.lang-btn').forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if ((btn.textContent === 'ENG' &amp;&amp; lang === 'en') ||</p>
+<p class="p1"><span class="Apple-converted-space">        </span>(btn.textContent === 'РУС' &amp;&amp; lang === 'ru') ||</p>
+<p class="p1"><span class="Apple-converted-space">        </span>(btn.textContent === 'MNE' &amp;&amp; lang === 'me')) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Nav</p>
+<p class="p1"><span class="Apple-converted-space">  </span>t.nav.forEach((txt, i) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const el = document.getElementById('nl' + i);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (el) el.textContent = txt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Hero</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('hero-eyebrow').textContent = t.hero_eyebrow;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('hero-title').innerHTML = t.hero_title.join('&lt;br&gt;');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('hero-sub').textContent = t.hero_sub;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('hero-tagline').textContent = t.hero_tagline;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('hero-btn1').textContent = t.hero_btn1;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('hero-btn2').textContent = t.hero_btn2;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('scroll-label').textContent = t.scroll;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Ventures</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('sec-ventures-label').textContent = t.sec_ventures_label;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('sec-ventures-title').innerHTML = t.sec_ventures_title;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('v1-label').textContent = t.v1_label;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('v1-name').innerHTML = t.v1_name;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('v1-desc').textContent = t.v1_desc;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('v1-link-text').textContent = t.v1_link;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('v1-services').innerHTML = t.v1_services.map(s =&gt; `&lt;li&gt;${s}&lt;/li&gt;`).join('');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('v2-label').textContent = t.v2_label;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('v2-name').innerHTML = t.v2_name;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('v2-desc').textContent = t.v2_desc;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('v2-link-text').textContent = t.v2_link;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('v2-services').innerHTML = t.v2_services.map(s =&gt; `&lt;li&gt;${s}&lt;/li&gt;`).join('');</p>
+<p class="p2"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Contact</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('sec-contact-label').textContent = t.sec_contact_label;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('sec-contact-title').innerHTML = t.sec_contact_title;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('contact-tagline').innerHTML = t.contact_tagline;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>t.contact_labels.forEach((l, i) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const el = document.getElementById('cl' + i);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (el) el.textContent = l;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('contact-location').textContent = t.contact_location;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('btn-ncg').textContent = t.btn_ncg;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('btn-mrm').textContent = t.btn_mrm;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Footer</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('footer-copy').textContent = t.footer_copy;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Set correct HTML lang attribute</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.documentElement.lang = lang === 'ru' ? 'ru' : lang === 'me' ? 'sr' : 'en';</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Initialize</p>
+<p class="p1">window.onload = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>setLang('en');</p>
+<p class="p1">};</p>
+<p class="p2"><br></p>
+<p class="p1">// Nav scroll effect</p>
+<p class="p1">window.addEventListener('scroll', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('nav').classList.toggle('scrolled', window.scrollY &gt; 60);</p>
+<p class="p1">});</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- NAV --&gt;</p>
+<p class="p1">&lt;nav id="nav"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a class="nav-brand" href="#"&gt;Erste&lt;em&gt;Maxim&lt;/em&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;ul class="nav-center" id="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="#ventures" id="nl0"&gt;&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="#contact"<span class="Apple-converted-space">  </span>id="nl3"&gt;&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="lang-switcher"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="lang-btn active" onclick="setLang('en')"&gt;ENG&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;·&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="lang-btn" onclick="setLang('ru')"&gt;РУС&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;·&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="lang-btn" onclick="setLang('me')"&gt;MNE&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- HERO --&gt;</p>
+<p class="p1">&lt;header class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-rule"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="hero-eyebrow" id="hero-eyebrow"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1 class="hero-title" id="hero-title"&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="hero-sub" id="hero-sub"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-divider"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="hero-tagline" id="hero-tagline"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-cta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#ventures" class="btn btn-gold" id="hero-btn1"&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#contact"<span class="Apple-converted-space">  </span>class="btn btn-outline" id="hero-btn2"&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="scroll-hint" id="scroll-hint-wrap"&gt;&lt;span id="scroll-label"&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- VENTURES --&gt;</p>
+<p class="p1">&lt;section class="ventures" id="ventures"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-border"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-label" id="sec-ventures-label"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title" id="sec-ventures-title"&gt;&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ventures-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Digital Marketing --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="venture-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="venture-num"&gt;01&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg class="venture-icon" viewBox="0 0 52 52" fill="none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;rect x="1" y="1" width="50" height="50" rx="1" stroke="#C9A84C" stroke-width="0.8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;path d="M10 36 L18 24 L26 30 L36 16 L44 24" stroke="#C9A84C" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;circle cx="44" cy="24" r="2.5" fill="#C9A84C"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;line x1="10" y1="40" x2="44" y2="40" stroke="rgba(201,168,76,0.3)" stroke-width="0.8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="venture-label" id="v1-label"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3 class="venture-name" id="v1-name"&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="venture-desc" id="v1-desc"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="venture-services" id="v1-services"&gt;&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://novacrnagora.com" target="_blank" rel="noopener" class="venture-link" id="v1-link"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span id="v1-link-text"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;svg width="16" height="10" viewBox="0 0 16 10" fill="none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;line x1="0" y1="5" x2="13" y2="5" stroke="#C9A84C" stroke-width="1"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;polyline points="9,1 14,5 9,9" fill="none" stroke="#C9A84C" stroke-width="1"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ventures-sep"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Natural Stone --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="venture-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="venture-num"&gt;02&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg class="venture-icon" viewBox="0 0 52 52" fill="none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;rect x="1" y="1" width="50" height="50" rx="1" stroke="#C9A84C" stroke-width="0.8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;path d="M16 38 L16 24 Q16 14 26 14 Q36 14 36 24 L36 38" stroke="#C9A84C" stroke-width="1.3" fill="none"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;line x1="12" y1="38" x2="40" y2="38" stroke="#C9A84C" stroke-width="1.3"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;path d="M21 30 Q24 26 28 32 Q31 28 35 30" stroke="rgba(201,168,76,0.4)" stroke-width="0.8" fill="none"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="venture-label" id="v2-label"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3 class="venture-name" id="v2-name"&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="venture-desc" id="v2-desc"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="venture-services" id="v2-services"&gt;&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.mramormne.com" target="_blank" rel="noopener" class="venture-link" id="v2-link"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span id="v2-link-text"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;svg width="16" height="10"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">          </span>viewBox="0 0 16 10" fill="none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;line x1="0" y1="5" x2="13" y2="5" stroke="#C9A84C" stroke-width="1"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;polyline points="9,1 14,5 9,9" fill="none" stroke="#C9A84C" stroke-width="1"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- CONTACT --&gt;</p>
+<p class="p1">&lt;section class="contact" id="contact"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="contact-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-border"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-label" id="sec-contact-label"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title" id="sec-contact-title"&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="contact-tagline" id="contact-tagline"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="contact-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="contact-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="contact-item-label" id="cl0"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://novacrnagora.com" target="_blank" class="contact-item-val"&gt;novacrnagora.com&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="contact-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="contact-item-label" id="cl1"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.mramormne.com" target="_blank" class="contact-item-val"&gt;mramormne.com&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="contact-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="contact-item-label" id="cl2"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="tel:+38267041706" class="contact-item-val"&gt;+382 67 041 706&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="contact-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="contact-item-label" id="cl3"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="contact-item-val" id="contact-location"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="contact-divider"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://novacrnagora.com" target="_blank" class="btn btn-outline" id="btn-ncg"&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://www.mramormne.com" target="_blank" class="btn btn-gold" id="btn-mrm"&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- FOOTER --&gt;</p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;span class="footer-brand"&gt;Erste&lt;em&gt;Maxim&lt;/em&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;ul class="footer-sites"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="https://novacrnagora.com" target="_blank"&gt;novacrnagora.com&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="https://www.mramormne.com" target="_blank"&gt;mramormne.com&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;span class="footer-copy" id="footer-copy"&gt;&lt;/span&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
