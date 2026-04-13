@@ -39,7 +39,7 @@
         linear-gradient( 60deg, transparent 40%, rgba(201,168,76,0.025) 65%, transparent 80%);
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
       position: fixed; top:0; left:0; right:0; z-index:999;
       padding: 1.3rem 6vw;
@@ -58,7 +58,7 @@
     }
     .nav-brand em { font-style:normal; color: var(--gold); }
 
-    .nav-center { display:flex; gap:2rem; list-style:none; }
+    .nav-center { display:flex; gap:2.2rem; list-style:none; }
     .nav-center a {
       font-size: 0.66rem; font-weight: 500;
       letter-spacing: 0.22em; text-transform: uppercase;
@@ -66,14 +66,10 @@
     }
     .nav-center a:hover { color: var(--gold); }
 
-    /* Language switcher */
     .lang-switcher {
       display: flex; gap: 0.5rem; align-items: center;
     }
-    .lang-switcher span {
-      color: var(--gold-line);
-      font-size: 0.65rem;
-    }
+    .lang-switcher span { color: var(--gold-line); font-size: 0.65rem; }
     .lang-btn {
       font-family: 'Raleway', sans-serif;
       font-size: 0.65rem; font-weight: 600;
@@ -85,7 +81,7 @@
     .lang-btn:hover { color: var(--gold-lt); }
     .lang-btn.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
 
-    /* ── HERO ── */
+    /* HERO */
     .hero {
       position: relative; min-height: 100vh;
       display: flex; flex-direction: column;
@@ -100,13 +96,6 @@
     @keyframes pulse {
       from { opacity:0.6; transform:scale(1); }
       to   { opacity:1;   transform:scale(1.06); }
-    }
-    .hero-rule { position:absolute; top:0; left:0; right:0; bottom:0; pointer-events:none; overflow:hidden; }
-    .hero-rule::before {
-      content:''; position:absolute;
-      width:1px; height:120%;
-      background:linear-gradient(to bottom, transparent, rgba(201,168,76,0.22), transparent);
-      left:50%; top:-10%;
     }
 
     .hero-eyebrow {
@@ -178,7 +167,7 @@
       100% { transform:scaleY(0); transform-origin:bottom; }
     }
 
-    /* ── SECTIONS ── */
+    /* SECTIONS */
     section { position:relative; z-index:1; }
     .section-inner { max-width:1140px; margin:0 auto; padding:0 6vw; }
     .section-border { width:50px; height:1px; background:var(--gold); margin-bottom:1.2rem; }
@@ -193,7 +182,7 @@
     }
     .section-title em { font-style:italic; color:var(--gold); }
 
-    /* ── VENTURES ── */
+    /* VENTURES */
     .ventures { padding:9rem 0; background:var(--dark2); }
 
     .ventures-grid {
@@ -247,49 +236,7 @@
     .venture-link svg { transition:transform 0.3s; }
     .venture-link:hover svg { transform:translateX(4px); }
 
-    /* ── WHY ── */
-    .why { padding:8rem 0; background:var(--dark); }
-    .why-grid {
-      display:grid; grid-template-columns:repeat(4,1fr);
-      gap:3px; margin-top:4rem; background:var(--gold-line);
-    }
-    .why-cell { background:var(--dark); padding:3rem 2.2rem; transition:background 0.3s; }
-    .why-cell:hover { background:var(--dark3); }
-    .why-cell-num {
-      font-family:'Cormorant Garamond',serif;
-      font-size:2.8rem; font-weight:300;
-      color:var(--gold); line-height:1; margin-bottom:1.2rem;
-    }
-    .why-cell-title {
-      font-size:0.75rem; font-weight:500;
-      letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.9rem;
-    }
-    .why-cell-text { font-size:0.8rem; font-weight:300; line-height:1.8; color:var(--muted); }
-
-    /* ── ABOUT ── */
-    .about { padding:8rem 0; background:var(--dark2); }
-    .about-layout {
-      display:grid; grid-template-columns:1fr 1fr;
-      gap:6rem; align-items:center; margin-top:3rem;
-    }
-    .about-text p {
-      font-size:0.85rem; font-weight:300;
-      line-height:1.95; color:var(--muted); margin-bottom:1.4rem;
-    }
-    .about-stats { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--gold-line); }
-    .stat-cell { background:var(--dark3); padding:2.5rem 2rem; text-align:center; }
-    .stat-num {
-      font-family:'Cormorant Garamond',serif;
-      font-size:3.4rem; font-weight:300;
-      color:var(--gold); line-height:1; margin-bottom:0.4rem;
-    }
-    .stat-num sup { font-size:1.4rem; }
-    .stat-label {
-      font-size:0.62rem; letter-spacing:0.2em;
-      text-transform:uppercase; color:var(--muted); font-weight:400;
-    }
-
-    /* ── CONTACT ── */
+    /* CONTACT */
     .contact { padding:8rem 0; background:var(--dark); text-align:center; }
     .contact-inner { max-width:700px; margin:0 auto; padding:0 6vw; }
     .contact-inner .section-border { margin:0 auto 1.2rem; }
@@ -319,7 +266,7 @@
       margin:3rem 0;
     }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer {
       background:var(--dark2); border-top:1px solid var(--gold-line);
       padding:2.5rem 6vw;
@@ -341,33 +288,28 @@
     }
     .footer-sites a:hover { color:var(--gold); }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media(max-width:900px){
-      .why-grid { grid-template-columns:1fr 1fr; }
-    }
-    @media(max-width:760px){
       .ventures-grid { grid-template-columns:1fr; }
       .ventures-sep { display:none; }
       .venture-card { padding:3rem 0 0; border-top:1px solid var(--gold-line); }
       .venture-card:first-child { border-top:none; padding-top:0; }
-      .about-layout { grid-template-columns:1fr; gap:3rem; }
-      .why-grid { grid-template-columns:1fr; }
+    }
+    @media(max-width:760px){
       .nav-center { display:none; }
-      footer { flex-direction:column; text-align:center; }
+      footer { flex-direction:column; text-align:center; gap:1.5rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════
-     TRANSLATIONS DATA
-══════════════════════════════════ -->
+<!-- TRANSLATIONS -->
 <script>
 const T = {
   en: {
-    nav: ["Ventures","Values","About","Contact"],
-    hero_eyebrow: "Erste Maxim Technologies DOO · Podgorica, Montenegro",
-    hero_title: ["Excellence","in <em>Every</em>","Endeavour"],
+    nav: ["Ventures", "Contact"],
+    hero_eyebrow: "Erste Maxim Technologies DOO",
+    hero_title: ["Excellence", "in <em>Every</em>", "Endeavour"],
     hero_sub: "Marketing · Natural Stone · Montenegro",
     hero_tagline: "A multi-venture house dedicated to crafting visibility, beauty, and enduring value — in the digital world and in stone.",
     hero_btn1: "Our Ventures",
@@ -378,34 +320,16 @@ const T = {
     sec_ventures_title: "Two Pillars of <em>Erste Maxim</em>",
 
     v1_label: "Digital Marketing",
-    v1_name: "Nova Crna Gora<br>— Media &amp; Marketing",
-    v1_desc: "Full-service digital marketing agency delivering tailored campaigns, brand strategy, and content that captures audiences across Montenegro and beyond. We drive measurable growth through creativity and data.",
-    v1_services: ["Brand Strategy &amp; Identity","Digital Advertising &amp; SEO","Social Media Management","Content Creation &amp; Production","Web Design &amp; Development"],
+    v1_name: "Nova Crna Gora<br>— Media & Marketing",
+    v1_desc: "Full-service digital marketing agency delivering tailored campaigns, brand strategy, and content that captures audiences across Montenegro and beyond.",
+    v1_services: ["Brand Strategy & Identity","Digital Advertising & SEO","Social Media Management","Content Creation & Production","Web Design & Development"],
     v1_link: "Visit novacrnagora.com",
 
     v2_label: "Natural Stone",
     v2_name: "Marmor MNE<br>— Stone Artisanship",
-    v2_desc: "Premium natural stone solutions for residential, hospitality, and commercial spaces. From restoration and polishing to bespoke creations in marble, granite, and travertine — we transform stone into lasting beauty.",
-    v2_services: ["Marble Restoration &amp; Polishing","Interior Design — Floors &amp; Walls","Exterior Facades &amp; Pavements","Hotel &amp; Villa Fit-Outs","Custom Stone Creations"],
+    v2_desc: "Premium natural stone solutions for residential, hospitality, and commercial spaces. From restoration and polishing to bespoke creations in marble, granite, and travertine.",
+    v2_services: ["Marble Restoration & Polishing","Interior Design — Floors & Walls","Exterior Facades & Pavements","Hotel & Villa Fit-Outs","Custom Stone Creations"],
     v2_link: "Visit mramormne.com",
-
-    sec_why_label: "Our Values",
-    sec_why_title: "Why <em>Erste Maxim</em>",
-    why: [
-      { num:"15+", title:"Years of Expertise", text:"Over 15 years of hands-on experience serving clients across Montenegro, the Adriatic, and international markets." },
-      { num:"∞",   title:"Precision Craftsmanship", text:"Every project — digital or physical — is executed with meticulous attention to detail and an obsession with quality." },
-      { num:"2",   title:"Specialised Divisions", text:"A unique dual-expertise house that understands both brand presence and material excellence under one roof." },
-      { num:"★",   title:"Client-First Approach", text:"We build long-term relationships, not one-off transactions. Your goals are our goals, from concept to completion." }
-    ],
-
-    sec_about_label: "About Us",
-    sec_about_title: "Erste Maxim<br><em>Technologies</em>",
-    about_p: [
-      "Erste Maxim Technologies DOO is a Podgorica-based multi-venture company that bridges the worlds of digital marketing and natural stone artisanship. Founded on a belief that excellence is non-negotiable, we have grown into two distinct yet complementary businesses serving clients across Montenegro and the wider Adriatic region.",
-      "Our marketing division — Nova Crna Gora — crafts compelling digital presences that generate real results. Our stone division — Marmor MNE — creates and restores natural stone surfaces for interiors, exteriors, and bespoke commissions, bringing timeless elegance to every space.",
-      "Whether you need a brand that cuts through the noise or a marble floor that stops people in their tracks, Erste Maxim is your partner."
-    ],
-    stats: ["Years Active","Divisions","Based in Montenegro","Attention to Detail"],
 
     sec_contact_label: "Get in Touch",
     sec_contact_title: "Let's Build <em>Something</em> Together",
@@ -418,9 +342,9 @@ const T = {
   },
 
   ru: {
-    nav: ["Направления","Ценности","О нас","Контакты"],
-    hero_eyebrow: "Erste Maxim Technologies DOO · Подгорица, Черногория",
-    hero_title: ["Совершенство","в <em>каждом</em>","начинании"],
+    nav: ["Направления", "Контакты"],
+    hero_eyebrow: "Erste Maxim Technologies DOO",
+    hero_title: ["Совершенство", "в <em>каждом</em>", "начинании"],
     hero_sub: "Маркетинг · Натуральный камень · Черногория",
     hero_tagline: "Многопрофильная компания, создающая видимость, красоту и непреходящую ценность — в цифровом мире и в камне.",
     hero_btn1: "Наши направления",
@@ -432,33 +356,15 @@ const T = {
 
     v1_label: "Цифровой маркетинг",
     v1_name: "Nova Crna Gora<br>— Медиа и маркетинг",
-    v1_desc: "Маркетинговое агентство полного цикла, создающее индивидуальные кампании, стратегии брендинга и контент, привлекающий аудиторию в Черногории и за её пределами. Мы обеспечиваем измеримый рост через творческий подход и данные.",
+    v1_desc: "Маркетинговое агентство полного цикла, создающее индивидуальные кампании, стратегии брендинга и контент, привлекающий аудиторию в Черногории и за её пределами.",
     v1_services: ["Стратегия и идентичность бренда","Цифровая реклама и SEO","Управление социальными сетями","Создание и производство контента","Веб-дизайн и разработка"],
     v1_link: "Посетить novacrnagora.com",
 
     v2_label: "Натуральный камень",
     v2_name: "Marmor MNE<br>— Каменное мастерство",
-    v2_desc: "Премиальные решения из натурального камня для жилых, гостиничных и коммерческих пространств. От реставрации и полировки до индивидуальных изделий из мрамора, гранита и травертина — мы превращаем камень в вечную красоту.",
+    v2_desc: "Премиальные решения из натурального камня для жилых, гостиничных и коммерческих пространств. От реставрации и полировки до индивидуальных изделий из мрамора, гранита и травертина.",
     v2_services: ["Реставрация и полировка мрамора","Интерьер — полы и стены","Фасады и мощение","Отделка отелей и вилл","Изделия из камня на заказ"],
     v2_link: "Посетить mramormne.com",
-
-    sec_why_label: "Наши ценности",
-    sec_why_title: "Почему <em>Erste Maxim</em>",
-    why: [
-      { num:"15+", title:"Лет опыта", text:"Более 15 лет практического опыта работы с клиентами в Черногории, на Адриатике и международных рынках." },
-      { num:"∞",   title:"Точность исполнения", text:"Каждый проект — цифровой или физический — выполняется с неустанным вниманием к деталям и стремлением к качеству." },
-      { num:"2",   title:"Специализированных направления", text:"Уникальная компания с двойной экспертизой, понимающая как присутствие бренда, так и материальное совершенство." },
-      { num:"★",   title:"Клиент на первом месте", text:"Мы строим долгосрочные отношения, а не разовые сделки. Ваши цели — наши цели, от идеи до результата." }
-    ],
-
-    sec_about_label: "О компании",
-    sec_about_title: "Erste Maxim<br><em>Technologies</em>",
-    about_p: [
-      "Erste Maxim Technologies DOO — многопрофильная компания из Подгорицы, объединяющая цифровой маркетинг и мастерство работы с натуральным камнем. Основанная на убеждении, что совершенство не подлежит компромиссу, мы выросли в два самостоятельных и взаимодополняющих бизнеса, обслуживающих клиентов в Черногории и Адриатическом регионе.",
-      "Наше маркетинговое подразделение — Nova Crna Gora — создаёт убедительное цифровое присутствие, которое приносит реальные результаты. Наше каменное подразделение — Marmor MNE — создаёт и реставрирует поверхности из натурального камня для интерьеров, экстерьеров и индивидуальных заказов.",
-      "Нужен бренд, который выделяется, или мраморный пол, останавливающий взгляд? Erste Maxim — ваш надёжный партнёр."
-    ],
-    stats: ["Лет работы","Направления","Черногория","Внимание к деталям"],
 
     sec_contact_label: "Связаться с нами",
     sec_contact_title: "Давайте создадим <em>что-то</em> вместе",
@@ -471,9 +377,9 @@ const T = {
   },
 
   me: {
-    nav: ["Djelatnosti","Vrijednosti","O nama","Kontakt"],
-    hero_eyebrow: "Erste Maxim Technologies DOO · Podgorica, Crna Gora",
-    hero_title: ["Izvrsnost","u <em>svakom</em>","poduhvatu"],
+    nav: ["Djelatnosti", "Kontakt"],
+    hero_eyebrow: "Erste Maxim Technologies DOO",
+    hero_title: ["Izvrsnost", "u <em>svakom</em>", "poduhvatu"],
     hero_sub: "Marketing · Prirodni kamen · Crna Gora",
     hero_tagline: "Višeprofitna kuća posvećena izgradnji vidljivosti, ljepote i trajne vrijednosti — u digitalnom svijetu i u kamenu.",
     hero_btn1: "Naše djelatnosti",
@@ -485,37 +391,19 @@ const T = {
 
     v1_label: "Digitalni marketing",
     v1_name: "Nova Crna Gora<br>— Mediji i marketing",
-    v1_desc: "Agencija za digitalni marketing punog servisa koja isporučuje prilagođene kampanje, brendingstrategiju i sadržaj koji osvaja publiku u Crnoj Gori i šire. Mjerljivi rast postižemo kroz kreativnost i podatke.",
+    v1_desc: "Agencija za digitalni marketing punog servisa koja isporučuje prilagođene kampanje, brendingstrategiju i sadržaj koji osvaja publiku u Crnoj Gori i šire.",
     v1_services: ["Strategija i identitet brenda","Digitalno oglašavanje i SEO","Upravljanje društvenim mrežama","Kreiranje i produkcija sadržaja","Web dizajn i razvoj"],
     v1_link: "Posjetite novacrnagora.com",
 
     v2_label: "Prirodni kamen",
     v2_name: "Marmor MNE<br>— Kamenarstvo",
-    v2_desc: "Vrhunska rješenja od prirodnog kamena za stambene, hotelijerske i poslovne prostore. Od restauracije i poliranja do besprijekornih kreacija od mermera, granita i travertina — pretvaramo kamen u trajnu ljepotu.",
+    v2_desc: "Vrhunska rješenja od prirodnog kamena za stambene, hotelijerske i poslovne prostore. Od restauracije i poliranja do besprijekornih kreacija od mermera, granita i travertina.",
     v2_services: ["Restauracija i poliranje mermera","Enterijer — podovi i zidovi","Fasade i popločavanja","Opremanje hotela i vila","Izrada kamena po mjeri"],
     v2_link: "Posjetite mramormne.com",
 
-    sec_why_label: "Naše vrijednosti",
-    sec_why_title: "Zašto <em>Erste Maxim</em>",
-    why: [
-      { num:"15+", title:"Godina iskustva", text:"Više od 15 godina praktičnog iskustva u radu s klijentima iz Crne Gore, Jadrana i međunarodnih tržišta." },
-      { num:"∞",   title:"Preciznost izrade", text:"Svaki projekat — digitalni ili fizički — izvodi se uz brižljivo posvećivanje detaljima i opsesiju kvalitetom." },
-      { num:"2",   title:"Specijalizovane djelatnosti", text:"Jedinstvena kuća dvostruke ekspertize koja razumije i prisustvo brenda i materijalno savršenstvo pod jednim krovom." },
-      { num:"★",   title:"Klijent na prvom mjestu", text:"Gradimo dugoročne odnose, a ne jednokratne transakcije. Vaši ciljevi su naši ciljevi, od ideje do realizacije." }
-    ],
-
-    sec_about_label: "O nama",
-    sec_about_title: "Erste Maxim<br><em>Technologies</em>",
-    about_p: [
-      "Erste Maxim Technologies DOO je podgorička višeprofitna kompanija koja spaja digitalni marketing i kamenarsko majstorstvo. Zasnovana na uvjerenju da se izvrsnost ne kompromituje, razvili smo dvije zasebne, a komplementarne djelatnosti koje služe klijentima širom Crne Gore i Jadrana.",
-      "Naša marketinška divizija — Nova Crna Gora — gradi snažno digitalno prisustvo koje donosi konkretne rezultate. Naša kamenarska divizija — Marmor MNE — izrađuje i restaurira površine od prirodnog kamena za enterijer, eksterijer i individualne narudžbe.",
-      "Trebate brend koji se ističe ili mermerni pod koji zaustavlja pogled? Erste Maxim je vaš partner."
-    ],
-    stats: ["Godina rada","Djelatnosti","Crna Gora","Pažnja na detalje"],
-
     sec_contact_label: "Kontaktirajte nas",
     sec_contact_title: "Izgradimo <em>nešto</em> zajedno",
-    contact_tagline: "„Bilo da je u pitanju vaš brend ili vaši zidovi —<br>pobrinućemo se da govore sami za sebe."",
+    contact_tagline: "„Bilo da je u pitanju vaš brend ili vaši zidovi —<br>pobrinućemo se da govore sami za sebe.“",
     contact_labels: ["Marketing","Prirodni kamen","Telefon","Lokacija"],
     contact_location: "Podgorica, Crna Gora",
     btn_ncg: "Nova Crna Gora →",
@@ -525,15 +413,10 @@ const T = {
 };
 </script>
 
-<!-- ══════ NAV ══════ -->
+<!-- NAV -->
 <nav id="nav">
   <a class="nav-brand" href="#">Erste<em>Maxim</em></a>
-  <ul class="nav-center" id="nav-links">
-    <li><a href="#ventures" id="nl0"></a></li>
-    <li><a href="#why"      id="nl1"></a></li>
-    <li><a href="#about"    id="nl2"></a></li>
-    <li><a href="#contact"  id="nl3"></a></li>
-  </ul>
+  <ul class="nav-center" id="nav-links"></ul>
   <div class="lang-switcher">
     <button class="lang-btn active" onclick="setLang('en')">ENG</button>
     <span>·</span>
@@ -543,7 +426,7 @@ const T = {
   </div>
 </nav>
 
-<!-- ══════ HERO ══════ -->
+<!-- HERO -->
 <header class="hero">
   <div class="hero-rule"></div>
   <p class="hero-eyebrow" id="hero-eyebrow"></p>
@@ -558,7 +441,7 @@ const T = {
   <div class="scroll-hint" id="scroll-hint-wrap"><span id="scroll-label"></span><span></span></div>
 </header>
 
-<!-- ══════ VENTURES ══════ -->
+<!-- VENTURES -->
 <section class="ventures" id="ventures">
   <div class="section-inner">
     <div class="section-border"></div>
@@ -566,87 +449,40 @@ const T = {
     <h2 class="section-title" id="sec-ventures-title"></h2>
 
     <div class="ventures-grid">
-      <!-- MARKETING -->
+      <!-- Digital Marketing -->
       <div class="venture-card">
         <div class="venture-num">01</div>
-        <svg class="venture-icon" viewBox="0 0 52 52" fill="none">
-          <rect x="1" y="1" width="50" height="50" rx="1" stroke="#C9A84C" stroke-width="0.8"/>
-          <path d="M10 36 L18 24 L26 30 L36 16 L44 24" stroke="#C9A84C" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="44" cy="24" r="2.5" fill="#C9A84C"/>
-          <line x1="10" y1="40" x2="44" y2="40" stroke="rgba(201,168,76,0.3)" stroke-width="0.8"/>
-        </svg>
+        <svg class="venture-icon" viewBox="0 0 52 52" fill="none">...</svg>
         <p class="venture-label" id="v1-label"></p>
         <h3 class="venture-name" id="v1-name"></h3>
         <p class="venture-desc" id="v1-desc"></p>
         <ul class="venture-services" id="v1-services"></ul>
-        <a href="https://novacrnagora.com" target="_blank" rel="noopener" class="venture-link" id="v1-link">
+        <a href="https://novacrnagora.com" target="_blank" class="venture-link" id="v1-link">
           <span id="v1-link-text"></span>
-          <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
-            <line x1="0" y1="5" x2="13" y2="5" stroke="#C9A84C" stroke-width="1"/>
-            <polyline points="9,1 14,5 9,9" fill="none" stroke="#C9A84C" stroke-width="1"/>
-          </svg>
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="none">...</svg>
         </a>
       </div>
 
       <div class="ventures-sep"></div>
 
-      <!-- MARBLE -->
+      <!-- Natural Stone -->
       <div class="venture-card">
         <div class="venture-num">02</div>
-        <svg class="venture-icon" viewBox="0 0 52 52" fill="none">
-          <rect x="1" y="1" width="50" height="50" rx="1" stroke="#C9A84C" stroke-width="0.8"/>
-          <path d="M16 38 L16 24 Q16 14 26 14 Q36 14 36 24 L36 38" stroke="#C9A84C" stroke-width="1.3" fill="none"/>
-          <line x1="12" y1="38" x2="40" y2="38" stroke="#C9A84C" stroke-width="1.3"/>
-          <path d="M21 30 Q24 26 28 32 Q31 28 35 30" stroke="rgba(201,168,76,0.4)" stroke-width="0.8" fill="none"/>
-        </svg>
+        <svg class="venture-icon" viewBox="0 0 52 52" fill="none">...</svg>
         <p class="venture-label" id="v2-label"></p>
         <h3 class="venture-name" id="v2-name"></h3>
         <p class="venture-desc" id="v2-desc"></p>
         <ul class="venture-services" id="v2-services"></ul>
-        <a href="https://www.mramormne.com" target="_blank" rel="noopener" class="venture-link" id="v2-link">
+        <a href="https://www.mramormne.com" target="_blank" class="venture-link" id="v2-link">
           <span id="v2-link-text"></span>
-          <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
-            <line x1="0" y1="5" x2="13" y2="5" stroke="#C9A84C" stroke-width="1"/>
-            <polyline points="9,1 14,5 9,9" fill="none" stroke="#C9A84C" stroke-width="1"/>
-          </svg>
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="none">...</svg>
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════ WHY ══════ -->
-<section class="why" id="why">
-  <div class="section-inner">
-    <div class="section-border"></div>
-    <p class="section-label" id="sec-why-label"></p>
-    <h2 class="section-title" id="sec-why-title"></h2>
-    <div class="why-grid" id="why-grid"></div>
-  </div>
-</section>
-
-<!-- ══════ ABOUT ══════ -->
-<section class="about" id="about">
-  <div class="section-inner">
-    <div class="about-layout">
-      <div>
-        <div class="section-border"></div>
-        <p class="section-label" id="sec-about-label"></p>
-        <h2 class="section-title" id="sec-about-title"></h2>
-        <div style="height:2.5rem"></div>
-        <div class="about-text" id="about-text"></div>
-      </div>
-      <div class="about-stats">
-        <div class="stat-cell"><div class="stat-num">15<sup>+</sup></div><div class="stat-label" id="stat0"></div></div>
-        <div class="stat-cell"><div class="stat-num">2</div><div class="stat-label" id="stat1"></div></div>
-        <div class="stat-cell"><div class="stat-num">MNE</div><div class="stat-label" id="stat2"></div></div>
-        <div class="stat-cell"><div class="stat-num">∞</div><div class="stat-label" id="stat3"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════ CONTACT ══════ -->
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div class="section-border"></div>
@@ -674,12 +510,12 @@ const T = {
     <div class="contact-divider"></div>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
       <a href="https://novacrnagora.com" target="_blank" class="btn btn-outline" id="btn-ncg"></a>
-      <a href="https://www.mramormne.com" target="_blank" class="btn btn-gold"    id="btn-mrm"></a>
+      <a href="https://www.mramormne.com" target="_blank" class="btn btn-gold" id="btn-mrm"></a>
     </div>
   </div>
 </section>
 
-<!-- ══════ FOOTER ══════ -->
+<!-- FOOTER -->
 <footer>
   <span class="footer-brand">Erste<em>Maxim</em></span>
   <ul class="footer-sites">
@@ -689,7 +525,6 @@ const T = {
   <span class="footer-copy" id="footer-copy"></span>
 </footer>
 
-<!-- ══════ JS ══════ -->
 <script>
   let currentLang = 'en';
 
@@ -697,21 +532,21 @@ const T = {
     currentLang = lang;
     const t = T[lang];
 
-    // Lang buttons
-    document.querySelectorAll('.lang-btn').forEach(b => {
-      b.classList.remove('active');
-      if ((b.textContent === 'ENG' && lang === 'en') ||
-          (b.textContent === 'РУС' && lang === 'ru') ||
-          (b.textContent === 'MNE' && lang === 'me')) {
-        b.classList.add('active');
-      }
+    // Update language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', 
+        (btn.textContent === 'ENG' && lang === 'en') ||
+        (btn.textContent === 'РУС' && lang === 'ru') ||
+        (btn.textContent === 'MNE' && lang === 'me')
+      );
     });
 
     // Nav
-    t.nav.forEach((txt, i) => {
-      const el = document.getElementById('nl' + i);
-      if (el) el.textContent = txt;
-    });
+    const navContainer = document.getElementById('nav-links');
+    navContainer.innerHTML = t.nav.map((text, i) => {
+      const id = i === 0 ? '#ventures' : '#contact';
+      return `<li><a href="${id}">${text}</a></li>`;
+    }).join('');
 
     // Hero
     document.getElementById('hero-eyebrow').textContent = t.hero_eyebrow;
@@ -722,7 +557,7 @@ const T = {
     document.getElementById('hero-btn2').textContent = t.hero_btn2;
     document.getElementById('scroll-label').textContent = t.scroll;
 
-    // Ventures section
+    // Ventures
     document.getElementById('sec-ventures-label').textContent = t.sec_ventures_label;
     document.getElementById('sec-ventures-title').innerHTML = t.sec_ventures_title;
 
@@ -730,61 +565,39 @@ const T = {
     document.getElementById('v1-name').innerHTML = t.v1_name;
     document.getElementById('v1-desc').textContent = t.v1_desc;
     document.getElementById('v1-link-text').textContent = t.v1_link;
-    const v1s = document.getElementById('v1-services');
-    v1s.innerHTML = t.v1_services.map(s => `<li>${s}</li>`).join('');
+    document.getElementById('v1-services').innerHTML = t.v1_services.map(s => `<li>${s}</li>`).join('');
 
     document.getElementById('v2-label').textContent = t.v2_label;
     document.getElementById('v2-name').innerHTML = t.v2_name;
     document.getElementById('v2-desc').textContent = t.v2_desc;
     document.getElementById('v2-link-text').textContent = t.v2_link;
-    const v2s = document.getElementById('v2-services');
-    v2s.innerHTML = t.v2_services.map(s => `<li>${s}</li>`).join('');
-
-    // Why
-    document.getElementById('sec-why-label').textContent = t.sec_why_label;
-    document.getElementById('sec-why-title').innerHTML = t.sec_why_title;
-    document.getElementById('why-grid').innerHTML = t.why.map(w => `
-      <div class="why-cell">
-        <div class="why-cell-num">${w.num}</div>
-        <h4 class="why-cell-title">${w.title}</h4>
-        <p class="why-cell-text">${w.text}</p>
-      </div>`).join('');
-
-    // About
-    document.getElementById('sec-about-label').textContent = t.sec_about_label;
-    document.getElementById('sec-about-title').innerHTML = t.sec_about_title;
-    document.getElementById('about-text').innerHTML = t.about_p.map(p => `<p>${p}</p>`).join('');
-    t.stats.forEach((s, i) => {
-      const el = document.getElementById('stat' + i);
-      if (el) el.textContent = s;
-    });
+    document.getElementById('v2-services').innerHTML = t.v2_services.map(s => `<li>${s}</li>`).join('');
 
     // Contact
     document.getElementById('sec-contact-label').textContent = t.sec_contact_label;
     document.getElementById('sec-contact-title').innerHTML = t.sec_contact_title;
     document.getElementById('contact-tagline').innerHTML = t.contact_tagline;
-    t.contact_labels.forEach((l, i) => {
-      const el = document.getElementById('cl' + i);
-      if (el) el.textContent = l;
+
+    t.contact_labels.forEach((label, i) => {
+      const el = document.getElementById(`cl${i}`);
+      if (el) el.textContent = label;
     });
+
     document.getElementById('contact-location').textContent = t.contact_location;
     document.getElementById('btn-ncg').textContent = t.btn_ncg;
     document.getElementById('btn-mrm').textContent = t.btn_mrm;
-
-    // Footer
     document.getElementById('footer-copy').textContent = t.footer_copy;
 
-    // html lang attr
-    document.documentElement.lang = lang === 'ru' ? 'ru' : lang === 'me' ? 'cnr' : 'en';
+    // Set language attribute
+    document.documentElement.lang = lang === 'ru' ? 'ru' : lang === 'me' ? 'sr' : 'en';
   }
 
-  // Nav scroll border
-  const nav = document.getElementById('nav');
+  // Nav scroll effect
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
   });
 
-  // Init English
+  // Initialize
   setLang('en');
 </script>
 </body>
